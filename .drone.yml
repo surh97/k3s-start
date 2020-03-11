@@ -1,0 +1,10 @@
+kind: pipeline
+type: kubernetes
+name: k3s-start
+
+steps:
+- name: greeting
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
