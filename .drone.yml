@@ -7,7 +7,3 @@ steps:
     image: node:alpine
     commands:
       - yarn --registry=https://registry.npm.taobao.org
-  - name: node build
-    image: node:alpine
-    commands:
-      - yarn build
