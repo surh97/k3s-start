@@ -3,7 +3,7 @@ type: kubernetes
 name: k3s-start
 
 steps:
-  - name: node install
+  - name: install
     image: node:alpine
     commands:
       - yarn --registry=https://registry.npm.taobao.org
