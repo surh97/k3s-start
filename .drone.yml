@@ -7,3 +7,19 @@ steps:
     image: node:alpine
     commands:
       - yarn --registry=https://registry.npm.taobao.org
+  - name: publish
+    image: plugins/docker
+    settings:
+      registry: harbor.surunhao.com
+      repo: harbor.surunhao.com/test/k8s-start
+      use_cache: true
+      insecure: true
+      username:
+        from_secret: harbor_username
+      password:
+        from_secret: harbor_password
+      tags:
+        - latest
+      when:
+        event: push
+        branch: master
