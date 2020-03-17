@@ -7,6 +7,10 @@ steps:
     image: node:alpine
     commands:
       - yarn --registry=https://registry.npm.taobao.org
+  - name: build
+    image: node:alpine
+    commands:
+      - yarn
   - name: publish
     image: plugins/docker
     settings:
